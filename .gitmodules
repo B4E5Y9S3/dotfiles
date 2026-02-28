@@ -1,0 +1,6 @@
+[submodule ".config/waybar"]
+	path = .config/waybar
+	url = https://github.com/B4E5Y9S3/mecha-waybar
+[submodule ".config/yazi/plugins/bunny.yazi"]
+	path = .config/yazi/plugins/bunny.yazi
+	url = https://github.com/stelcodes/bunny.yazi
