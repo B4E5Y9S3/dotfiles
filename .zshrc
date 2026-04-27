@@ -113,30 +113,32 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# EXPORTS
+export VISUAL=nvim
+export EDITOR='$VISUAL'
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/keys/.dart-cli-completion/zsh-config.zsh ]] && . /home/keys/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 # Alias
 # Basic replacements
-alias ls='eza --group-directories-first --icons'
-alias ll='eza -lh --group-directories-first --icons'
-alias la='eza -lha --group-directories-first --icons'
-alias l='eza -l --group-directories-first --icons'
+alias ls='eza --group-directories-first --icons always $@'
+alias ll='eza -lh --group-directories-first --icons always $@'
+alias la='eza -lha --group-directories-first --icons always $@'
+alias l='eza -l --group-directories-first --icons always $@'
 
 # Tree views
-alias lt='eza --tree --level=2 --icons'
-alias ltt='eza --tree --icons'
+alias lt='eza --tree --level=2 --icons always $@'
+alias ltt='eza --tree --icons always $@'
 
 # Sorting
-alias lS='eza -lh --sort=size --icons'
-alias lT='eza -lh --sort=modified --icons'
-alias lA='eza -lha --sort=accessed --icons'
+alias lS='eza -lh --sort=size --icons always $@'
+alias lT='eza -lh --sort=modified --icons always $@'
+alias lA='eza -lha --sort=accessed --icons always $@'
 
 # Git-aware
-alias lg='eza -lh --git --icons'
+alias lg='eza -lh --git --icons always $@'
 
 # Minimal / scripts
-alias ls1='eza -1'
+alias ls1='eza -1 always $@'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
